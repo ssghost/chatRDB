@@ -51,7 +51,7 @@ def store_data(data: JSONObject) -> str:
 
 def retrieve_data(id: str) -> JSONObject:
     retrieve_prompt = f"{id}"
-    response = chat(retrieve_prompt,rserver.retrieve_redis)
+    response = chat(retrieve_prompt, rserver.retrieve_redis)
 
     return json.loads(base64.b64decode(response).decode())
 
