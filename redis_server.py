@@ -72,7 +72,13 @@ class RedisServer:
         self.port.publish("my-channel", "Hello, Redis!")
         time.sleep(0.5)
         threading.Event().set()
-        listener_thread.join()  
+        listener_thread.join() 
+
+    def store_redis(self):
+        pass
+
+    def retrieve_redis(self):
+        pass 
 
 def main() -> None:
     rserver = RedisServer()
